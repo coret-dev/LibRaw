@@ -452,6 +452,24 @@ extern "C"
     return lr->color.maximum;
   }
 
+  DllDef void libraw_set_use_camera_wb(libraw_data_t *lr, int value)
+  {
+    if (!lr)
+      return;
+    LibRaw *ip = (LibRaw *)lr->parent_class;
+    ip->imgdata.params.use_camera_wb = value;
+  }
+
+  DllDef void libraw_set_use_auto_wb(libraw_data_t *lr, int value)
+  {
+    if (!lr)
+      return;
+    LibRaw *ip = (LibRaw *)lr->parent_class;
+    ip->imgdata.params.use_auto_wb = value;
+  }
+
+  DllDef int libraw_ctVersionNumber() { return 1; }
+
 #ifdef __cplusplus
 }
 #endif

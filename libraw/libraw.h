@@ -180,6 +180,11 @@ extern "C"
   DllDef libraw_lensinfo_t *libraw_get_lensinfo(libraw_data_t *lr);
   DllDef libraw_imgother_t *libraw_get_imgother(libraw_data_t *lr);
 
+  DllDef void libraw_set_use_camera_wb(libraw_data_t *lr, int value);
+  DllDef void libraw_set_use_auto_wb(libraw_data_t *lr, int value);
+
+  DllDef int libraw_ctVersionNumber();
+
 #ifdef __cplusplus
 }
 #endif
