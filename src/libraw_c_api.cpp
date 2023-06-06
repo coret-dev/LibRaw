@@ -468,6 +468,8 @@ extern "C"
     ip->imgdata.params.use_auto_wb = value;
   }
 
+  DllDef int libraw_get_sizeFlip(libraw_data_t *lr) { return lr->sizes.flip; }
+
   DllDef int libraw_ctVersionNumber() { return 1; }
 
 #ifdef __cplusplus

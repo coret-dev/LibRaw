@@ -183,6 +183,8 @@ extern "C"
   DllDef void libraw_set_use_camera_wb(libraw_data_t *lr, int value);
   DllDef void libraw_set_use_auto_wb(libraw_data_t *lr, int value);
 
+  DllDef int libraw_get_sizeFlip(libraw_data_t *lr);
+
   DllDef int libraw_ctVersionNumber();
 
 #ifdef __cplusplus
